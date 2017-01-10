@@ -14,6 +14,8 @@ public class InsertionSort {
     }
 
     public static void InsertionSort(int[] data) {
+        if (data == null)
+            return;
         int length = data.length;
         for (int j = 1; j <= length - 1; j++) {
             int key = data[j];
