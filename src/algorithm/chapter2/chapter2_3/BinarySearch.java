@@ -16,7 +16,7 @@ public class BinarySearch {
             else if (data[q] < key)
                 return binarySearch(data, q + 1, r, key);
             else
-                return binarySearch(data, p, q-1, key);
+                return binarySearch(data, p, q - 1, key);
         }
         return -1;
     }
