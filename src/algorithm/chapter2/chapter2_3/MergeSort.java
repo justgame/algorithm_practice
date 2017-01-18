@@ -1,6 +1,7 @@
 package algorithm.chapter2.chapter2_3;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Created by xcl on 2017-01-12.
@@ -54,11 +55,13 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] data1 = {1, 4, 6, 13, 2, 4 ,9, 12, 14};
-        merge(data1,0, 3, 8);
-        System.out.println(Arrays.toString(data1));
-        int[] data2 = {2, 4, 1, 33, 552, 31, 51, 11, 34, 22, 52, 51, 42, 14, 6};
-        mergeSort(data2,0, data2.length - 1);
-        System.out.println(Arrays.toString(data2));
+        int n = 20;
+        int[] data = new int[n];
+        for (int i = 0; i < n; i++) {
+            Random random = new Random();
+            data[i] = random.nextInt(100);
+        }
+        mergeSort(data,0, n-1);
+        System.out.println(Arrays.toString(data));
     }
 }
